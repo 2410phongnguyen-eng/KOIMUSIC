@@ -2339,6 +2339,28 @@ button,input,select{font:inherit}
       init();
     })();
   </script>
+<script>
+// Danh sách các link được phép hiển thị
+const allowedLinks = [
+    "https://2410phongnguyen-eng.github.io/Koi/",
+    "https://example.com/",
+    "https://google.com/"
+];
 
+// Duyệt tất cả thẻ <a>
+document.querySelectorAll("a").forEach(link => {
+    const href = link.href;
+
+    const allowed = allowedLinks.some(url => href.startsWith(url));
+
+    if (!allowed) {
+        // Xóa hoàn toàn khỏi trang
+        link.remove();
+
+        // Hoặc nếu chỉ muốn ẩn thì thay bằng:
+        // link.style.display = "none";
+    }
+});
+</script>
 </body>
 </html>
