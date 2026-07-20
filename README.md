@@ -2342,9 +2342,7 @@ button,input,select{font:inherit}
 <script>
 // Danh sách các link được phép hiển thị
 const allowedLinks = [
-    "https://2410phongnguyen-eng.github.io/Koi/",
-    "https://example.com/",
-    "https://google.com/"
+
 ];
 
 // Duyệt tất cả thẻ <a>
